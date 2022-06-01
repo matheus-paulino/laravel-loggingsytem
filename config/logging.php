@@ -57,6 +57,11 @@ return [
             'ignore_exceptions' => false,
         ],
 
+        'mysql' => [
+            'driver' => 'custom',
+            'via' => \App\Logging\MysqlLogger::class,
+        ],
+
         'single' => [
             'driver' => 'single',
             'path' => storage_path('logs/laravel.log'),
